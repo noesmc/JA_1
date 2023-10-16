@@ -37,33 +37,34 @@ public class Main {
         } else {
             int length = sumOfTwoStrings.length();
             System.out.println("The length is: " + length);
+
+
+            char c = sumOfTwoStrings.charAt(7);
+            System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
+
+            String replacedFirstName = name.replace('a', 'i');
+            boolean areEqual = name.equals(replacedFirstName);
+            System.out.println("Strings are equal?: " + areEqual);
+
+            boolean startsWithN = name.startsWith("N");
+            System.out.println("Does the name start with letter \"N\"?: " + startsWithN);
+
+            boolean endsWithMine = name.endsWith("a");
+            System.out.println("Does the name end with letter \"a\"?: " + endsWithMine);
+
+            boolean containsSin = correctSum.contains("Sin");
+            System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " + containsSin);
+
+            String lowerCase = name.toLowerCase();
+            boolean areEqualWithoutReg = name.equalsIgnoreCase(lowerCase);
+            System.out.println("Strings are equal with IgnoreCase?: " + areEqualWithoutReg);
+
+            StringBuffer buffer;
+            buffer = new StringBuffer(name);
+            buffer.append(" " + fam);
+            System.out.println(buffer);
         }
-
-        char c = sumOfTwoStrings.charAt(7);
-        System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
-
-        String replacedFirstName = name.replace('a', 'i');
-        boolean areEqual = name.equals(replacedFirstName);
-        System.out.println("Strings are equal?: " + areEqual);
-
-        boolean startsWithN = name.startsWith("N");
-        System.out.println("Does the name start with letter \"N\"?: " + startsWithN);
-
-        boolean endsWithMine = name.endsWith("a");
-        System.out.println("Does the name end with letter \"a\"?: " + endsWithMine);
-
-        boolean containsSin = correctSum.contains("Sin");
-        System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " + containsSin);
-
-        String lowerCase = name.toLowerCase();
-        boolean areEqualWithoutReg = name.equalsIgnoreCase(lowerCase);
-        System.out.println("Strings are equal with IgnoreCase?: " + areEqualWithoutReg);
-
-        StringBuffer buffer;
-        buffer = new StringBuffer(name);
-        buffer.append(" " + fam);
-        System.out.println(buffer);
-        }
+    }
     private static String getTypes() {
         byte byteValue = 1;
         short shortValue = 11111;
