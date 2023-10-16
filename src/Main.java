@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         String firstName = "Nikita",
@@ -28,23 +27,22 @@ public class Main {
         String name = scanner.nextLine();
         System.out.println("Enter your last name below:");
         String fam = scanner.nextLine();
-        System.out.println("FullName is: " + name + " " + fam);
-
-        String sumOfTwoStrings = name + fam;
-        String correctSum = name + " " + fam;
-        if (sumOfTwoStrings.isEmpty()) {
-            System.out.println("No information available");
+        if (name.isEmpty() || fam.isEmpty()) {
+            System.out.println("One of elements or all elements are empty");
         } else {
+            System.out.println("FullName is: " + name + " " + fam);
+
+            String sumOfTwoStrings = name + fam;
+            String correctSum = name + " " + fam;
             int length = sumOfTwoStrings.length();
             System.out.println("The length is: " + length);
-
 
             char c = sumOfTwoStrings.charAt(7);
             System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
 
             String replacedFirstName = name.replace('a', 'i');
             boolean areEqual = name.equals(replacedFirstName);
-            System.out.println("Strings are equal?: " + areEqual);
+            System.out.println("Are strings equal?: " + areEqual);
 
             boolean startsWithN = name.startsWith("N");
             System.out.println("Does the name start with letter \"N\"?: " + startsWithN);
@@ -57,11 +55,11 @@ public class Main {
 
             String lowerCase = name.toLowerCase();
             boolean areEqualWithoutReg = name.equalsIgnoreCase(lowerCase);
-            System.out.println("Strings are equal with IgnoreCase?: " + areEqualWithoutReg);
+            System.out.println("Are strings equal with IgnoreCase?: " + areEqualWithoutReg);
 
             StringBuffer buffer;
             buffer = new StringBuffer(name);
-            buffer.append(" " + fam);
+            buffer.append(" ").append(fam);
             System.out.println(buffer);
         }
     }
@@ -86,4 +84,3 @@ public class Main {
                 charValue);
         }
     }
-
