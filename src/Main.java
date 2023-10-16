@@ -21,7 +21,7 @@ public class Main {
         System.out.println(types);
 
         //firstName == 'Nikita'
-        //lastName == 'Sinykovich'
+        //lastName == 'Sinyukovich'
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your first name below:");
