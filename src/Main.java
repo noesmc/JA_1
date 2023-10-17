@@ -37,8 +37,10 @@ public class Main {
             int length = sumOfTwoStrings.length();
             System.out.println("The length is: " + length);
 
-            char c = sumOfTwoStrings.charAt(7);
-            System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
+            if (length>=8) {
+                char c = sumOfTwoStrings.charAt(7);
+                System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
+            }
 
             String replacedFirstName = name.replace('a', 'i');
             boolean areEqual = name.equals(replacedFirstName);
@@ -82,5 +84,5 @@ public class Main {
                 doubleValue,
                 booleanValue,
                 charValue);
-        }
     }
+}
