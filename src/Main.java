@@ -16,52 +16,48 @@ public class Main {
                 dateStart);
         System.out.println(aboutMe);
 
-        String types = getTypes();
-        System.out.println(types);
+        System.out.println(getTypes());
 
         //firstName == 'Nikita'
         //lastName == 'Sinyukovich'
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your first name below:");
-        String name = scanner.nextLine();
+        firstName = scanner.nextLine();
         System.out.println("Enter your last name below:");
-        String fam = scanner.nextLine();
-        if (name.isEmpty() || fam.isEmpty()) {
+        lastName = scanner.nextLine();
+        if (firstName.isEmpty() || lastName.isEmpty()) {
             System.out.println("One of elements or all elements are empty");
         } else {
-            System.out.println("FullName is: " + name + " " + fam);
+            System.out.println("FullName is: " + firstName + " " + lastName);
 
-            String sumOfTwoStrings = name + fam;
-            String correctSum = name + " " + fam;
+            String sumOfTwoStrings = firstName + lastName;
+            String correctSum = firstName + " " + lastName;
             int length = sumOfTwoStrings.length();
             System.out.println("The length is: " + length);
 
-            if (length>=8) {
-                char c = sumOfTwoStrings.charAt(7);
-                System.out.println(sumOfTwoStrings + ", the 8th symbol is: " + c);
-            }
+                if (length >= 8) {
+                    System.out.println(sumOfTwoStrings + ", the 8th symbol is: " +
+                         sumOfTwoStrings.charAt(7));
+                }
 
-            String replacedFirstName = name.replace('a', 'i');
-            boolean areEqual = name.equals(replacedFirstName);
-            System.out.println("Are strings equal?: " + areEqual);
+            System.out.println("Are strings equal?: " +
+                    firstName.equals(firstName.replace('a', 'i')));
 
-            boolean startsWithN = name.startsWith("N");
-            System.out.println("Does the name start with letter \"N\"?: " + startsWithN);
+            System.out.println("Does the name start with letter \"N\"?: " +
+                    firstName.startsWith("N"));
 
-            boolean endsWithMine = name.endsWith("a");
-            System.out.println("Does the name end with letter \"a\"?: " + endsWithMine);
+            System.out.println("Does the name end with letter \"a\"?: " +
+                    firstName.endsWith("a"));
 
-            boolean containsSin = correctSum.contains("Sin");
-            System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " + containsSin);
+            System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " + correctSum.contains("Sin"));
 
-            String lowerCase = name.toLowerCase();
-            boolean areEqualWithoutReg = name.equalsIgnoreCase(lowerCase);
-            System.out.println("Are strings equal with IgnoreCase?: " + areEqualWithoutReg);
+            System.out.println("Are strings equal with IgnoreCase?: " +
+                    firstName.equalsIgnoreCase(firstName.toLowerCase()));
 
             StringBuffer buffer;
-            buffer = new StringBuffer(name);
-            buffer.append(" ").append(fam);
+            buffer = new StringBuffer(firstName);
+            buffer.append(" ").append(lastName);
             System.out.println(buffer);
         }
     }
@@ -74,8 +70,8 @@ public class Main {
         double doubleValue = 111.1111111111111;
         boolean booleanValue = true;
         char charValue = 'C';
-        return String.format("byte is %d,short is %d, int is %d, long is %d, float is %s, double is %s, " +
-                        "boolean is %s, char is %s",
+        return String.format("byte is %d,short is %d, int is %d, long is %d, float is %f, double is %f, " +
+                        "boolean is %b, char is %c",
                 byteValue,
                 shortValue,
                 intValue,
