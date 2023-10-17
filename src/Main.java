@@ -70,7 +70,7 @@ public class Main {
         double doubleValue = 111.1111111111111;
         boolean booleanValue = true;
         char charValue = 'C';
-        return String.format("byte is %d,short is %d, int is %d, long is %d, float is %f, double is %f, " +
+        return String.format("byte is %d, short is %d, int is %d, long is %d, float is %f, double is %f, " +
                         "boolean is %b, char is %c",
                 byteValue,
                 shortValue,
