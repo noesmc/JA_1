@@ -49,7 +49,8 @@ public class Main {
             System.out.println("Does the name end with letter \"a\"?: " +
                     firstName.endsWith("a"));
 
-            System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " + (firstName + " " + lastName).contains("Sin"));
+            System.out.println("Does the sumOfTwoStrings contain \"Sin\"?: " +
+                    (firstName + " " + lastName).contains("Sin"));
 
             System.out.println("Are strings equal with IgnoreCase?: " +
                     firstName.equalsIgnoreCase(firstName.toLowerCase()));
